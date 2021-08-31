@@ -1,4 +1,4 @@
-//package exercicio01;
+package exemplos;
 /**
  * Exemplo01
  */

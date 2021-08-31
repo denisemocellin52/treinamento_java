@@ -1,6 +1,6 @@
 //class
 //main
-//package exercicio01;
+package exemplos;
 
 public class Exemplo02 {
     
