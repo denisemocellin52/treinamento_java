@@ -1,0 +1,15 @@
+{
+    "java.project.sourcePaths": [
+        "uri",
+        "aula06/exercicios",
+        "aula06/exemplos",
+        "aula05/exercicios",
+        "aula05/exemplos",
+        "aula04",
+        "aula03/exercicios",
+        "aula03/exemplos",
+        "aula02/exercicios",
+        "aula09/exercicios"
+    ],
+    "terminal.integrated.defaultProfile.windows": "JavaScript Debug Terminal"
+}
