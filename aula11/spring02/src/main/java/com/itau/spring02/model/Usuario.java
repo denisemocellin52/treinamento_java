@@ -1,11 +1,16 @@
 package com.itau.spring02.model;
 
-import javax.annotation.Generated;
+import java.util.List;
+
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
+import javax.persistence.Id;
+import javax.persistence.OneToMany;
 import javax.persistence.Table;
+
+import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 
 @Entity // esta classe será mapeada no Banco de Dados
 @Table(name = "tb_usuario")
@@ -21,6 +26,11 @@ public class Usuario {
 
     @Column(name = "email", length = 80, nullable = false, unique = true)
     private String email;
+
+    //Um usuário pode ter varios carros
+    @OneToMany(mappedBy = "proprietario")
+    @JsonIgnoreProperties("proprietario")
+    private List<Carro> carros;
 
     public long getId() {
         return id;
@@ -44,6 +54,14 @@ public class Usuario {
 
     public void setEmail(String email) {
         this.email = email;
+    }
+
+    public List<Carro> getCarros() {
+        return carros;
+    }
+
+    public void setCarros(List<Carro> carros) {
+        this.carros = carros;
     }
     
     
